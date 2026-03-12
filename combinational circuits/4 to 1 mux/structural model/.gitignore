@@ -1,0 +1,7 @@
+# Icarus Verilog outputs
+*.vvp
+*.vcd
+
+#OS generated files
+.DS_Store
+Thumbs.db
