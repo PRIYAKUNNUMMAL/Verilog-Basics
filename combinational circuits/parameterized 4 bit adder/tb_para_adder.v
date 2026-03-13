@@ -1,4 +1,4 @@
-module tb_generate_adder;
+module tb_para_adder;
 
     reg [3:0] a,b ;
     reg cin;
@@ -6,7 +6,7 @@ module tb_generate_adder;
     wire [3:0] sum ;
     wire cout;
 
-    generate_four_bit_adder #(4) dut(a,b,cin,sum,cout);
+    para_four_bit_adder #(4) dut(a,b,cin,sum,cout);
 
     initial begin
         $dumpfile("simulation.vcd");
