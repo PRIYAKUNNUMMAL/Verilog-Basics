@@ -8,6 +8,7 @@ This repository contains basic digital circuits implemented in Verilog while lea
 - AND Gate
 - Full Adder
 - 4 Bit Ripple Adder
+- 4 : 1 Multiplexer
 
 ## Tools Used
 - Visual Studio Code
