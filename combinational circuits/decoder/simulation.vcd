@@ -1,0 +1,36 @@
+$date
+	Fri Mar 13 22:12:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_decoder $end
+$var wire 4 ! out [3:0] $end
+$var reg 2 " in [1:0] $end
+$scope module decoder1 $end
+$var wire 2 # in [1:0] $end
+$var reg 4 $ out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 $
+b10 #
+b10 "
+b0 !
+$end
+#5
+b1000 !
+b1000 $
+b11 "
+b11 #
+#10
+b1 !
+b1 $
+b0 "
+b0 #
+#15
