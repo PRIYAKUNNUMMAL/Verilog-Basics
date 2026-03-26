@@ -8,7 +8,6 @@ module para_four_bit_adder #(parameter N = 4 )
  generate
     for (i = 0;i<N ;i=i+1 ) begin : adder_loop
         full_adder fa(.a(a[i]), .b(b[i]), .cin(carry[i]), .sum(sum[i]), .cy(carry[i+1]));
-
     end
  endgenerate
 

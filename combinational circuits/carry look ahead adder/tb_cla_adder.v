@@ -1,16 +1,16 @@
-module tb_four_bit_adder;
+module tb_cla_adder;
 
     reg [3:0] a,b ;
     reg cin;
     wire [3:0] sum ;
     wire cout;
 
-    four_bit_adder dut(.a(a),.b(b),.cin(cin),.sum(sum),.cy(cout));
+    cla_adder dut(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
     integer i,j,k;
 
     initial begin
         $dumpfile("simulation.vcd");
-        $dumpvars(0, tb_four_bit_adder);
+        $dumpvars(0, tb_cla_adder);
 
         for (i = 0 ;i<16 ;i=i+1 ) begin
             for (j = 0;j<16 ;j=j+1 ) begin

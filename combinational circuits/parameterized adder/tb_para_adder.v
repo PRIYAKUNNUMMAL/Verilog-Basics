@@ -1,19 +1,19 @@
-module tb_four_bit_adder;
-
-    reg [3:0] a,b ;
+module tb_para_adder;
+    parameter N = 2;
+    reg [N-1:0] a,b ;
     reg cin;
-    wire [3:0] sum ;
+
+    wire [N-1:0] sum ;
     wire cout;
 
-    four_bit_adder dut(.a(a),.b(b),.cin(cin),.sum(sum),.cy(cout));
+    para_four_bit_adder #(N) dut(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
     integer i,j,k;
 
     initial begin
         $dumpfile("simulation.vcd");
-        $dumpvars(0, tb_four_bit_adder);
-
-        for (i = 0 ;i<16 ;i=i+1 ) begin
-            for (j = 0;j<16 ;j=j+1 ) begin
+        $dumpvars(0, tb_para_adder);
+        for (i = 0 ;i<(1<<N) ;i=i+1 ) begin
+            for (j = 0;j<(1<<N) ;j=j+1 ) begin
                 for (k = 0;k<2 ;k=k+1 ) begin
                    a = i;
                    b = j; 
@@ -25,7 +25,7 @@ module tb_four_bit_adder;
                 end     
             end
         end
-        $display("All test cases completed");
-        $finish;
+        $display("All test cases completed");$finish;
     end
-endmodule    
+
+endmodule
